@@ -20,9 +20,9 @@ const page = () => {
     <div className='relative  w-full h-screen top-[0] flex flex-col items-center justify-center'>
       {
         !scannerOpened && 
-        <div className='h-fit'>
+        <div className='h-screen'>
 
-          <div className='flex flex-col justify-center items-center gap-8 mb-8 w-full'>
+          <div className='flex flex-col justify-center items-center gap-4 mb-4 w-full'>
 
             <Image
               src={Consumer}
@@ -38,15 +38,15 @@ const page = () => {
             />
           </div>
 
-          <div className='my-8 w-screen flex flex-col justify-center container items-center'>
+          <div className='flex  gap-3 flex-col justify-center container items-center text-center placeholder:text-[1rem] placeholder:p-2'>
             <label>Add Name</label>
             <input type='text' className='input' placeholder='Enter the details' />
             <label>Add Location</label>
             <input type='text' className='input' placeholder='Enter the details' />
             <label>Add Emal</label>
             <input type='email' className='input' placeholder='Enter the details' />
-          </div>
           <Button title="Add" />
+          </div>
         </div>
       }
       {scannerOpened && <QrScannerComp />}
