@@ -1,43 +1,67 @@
-import React from 'react'
-import Image from 'next/image'
-import './page.css'
-import Source from '../../assets/Source.svg'
-import Profile from '../../assets/sourceprofile.svg'
-import Navbar from '../components/navbar/navbar.js'
-import Button from  '../components/button/button'
-const page = () => {
+"use client"
+import React, { useState } from 'react';
+import "./page.css"
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import QRCode from "qrcode"
+import Source from '../../assets/Source.svg';
+import Button from '../components/button/button';
+import Navbar from '../components/navbar/navbar';
+
+const Page = () => {
+  const [productDescription, setProductDescription] = useState('');
+  const [quantity, setQuantity] = useState('');
+  const [qrCodeImage, setQRCodeImage] = useState('');
+
+  const handleChangeProductDescription = (e) => {
+    setProductDescription(e.target.value);
+  };
+
+  const handleChangeQuantity = (e) => {
+    setQuantity(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const dataToEncode = `Product Description: ${productDescription}, Quantity: ${quantity}`;
+    try {
+      const qrCodeDataURL = await QRCode.toDataURL(dataToEncode);
+      setQRCodeImage(qrCodeDataURL);
+    } catch (error) {
+      console.error('Error generating QR code:', error);
+    }
+  };
+
   return (
-    <div className='maincontainer '>
-      <div className='flex flex-col items-center mb-8 mt-10'>
-
-      <Image
-      src={Source}
-      width={300}
-      height={300}
-      className='source m-8 '
-      />
-      <Image
-      src={Profile}
-      width={300}
-      height={300}
-      className='source  m-8'
-      />
-    
-      </div>
-      
-      <div className='my-8  flex flex-col items-center container '>
-        <b><label>Add Name</label></b>
-        <input type='text' className='input' placeholder='Enter the details'/>
-        <label>Add Location</label>
-        <input type='text' className='input' placeholder='Enter the details'/>
-        
-        
-      </div>
-     <a href='/sourceregister'><Button title="Add"/></a>
-      <Navbar/>
+    <div className='maincontainer'>
+      {/* Your existing JSX */}
+      <form onSubmit={handleSubmit}>
+        <div className='container'>
+          <label>Product Description</label>
+          <input
+            type='text'
+            className='input'
+            placeholder='Enter the details'
+            value={productDescription}
+            onChange={handleChangeProductDescription}
+          />
+          <label>Quantity</label>
+          <input
+            type='text'
+            className='input'
+            placeholder='Enter the details'
+            value={quantity}
+            onChange={handleChangeQuantity}
+          />
+        </div>
+        <button type="submit">Generate QR Code</button>
+      </form>
+      {/* Display QR code image */}
+      {qrCodeImage && <img src={qrCodeImage} alt="QR Code" />}
+      <Navbar />
     </div>
-    
-  )
-}
+  );
+};
 
-export default page
+export default Page;
+
