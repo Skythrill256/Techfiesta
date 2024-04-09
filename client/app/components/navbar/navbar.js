@@ -1,25 +1,31 @@
 import React from 'react'
-import './navbar.css'
-const navbar = () => {
+// import './navbar.css'
+const navbar = ({openCloseQR}) => {
   return (
-    <div className="w-screen container ">
-	<ul>
-	<li>
+    <div className="w-[90%] fixed bottom-0 rounded-full px-20 bg-zinc-700 mb-2 flex justify-center">
+	<ul className='flex list-none gap-2 justify-center py-3 w-fit px-4'>
+	<li className='navElem'>
 		<a href="#">
 			<i className="ai-home"></i>
-			<span>home icon</span>
+			<span>Home</span>
 		</a>
 	</li>
-	<li>
+	<li className='navElem'>
+		<a onClick={openCloseQR} href="#">
+			<i className="ai-home"></i>
+			<span>Scanner</span>
+		</a>
+	</li>
+	<li className='navElem'>
 		<a href="#">
 			<i className="ai-image"></i>
-			<span>tansaction icon</span>
+			<span>Tansaction</span>
 		</a>
 	</li>	
-	<li>
+	<li className='navElem'>
 		<a href="#">
 			<i className="ai-file"></i>
-			<span>profile icon</span>
+			<span>Profile</span>
 		</a>
 	</li>
 	
