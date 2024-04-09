@@ -34,7 +34,7 @@ const page = () => {
         
       </div>
      <a href ='/consumerrecord'><Button title="Add"/></a>
-      <Navbar/>
+      
     </div>
     
   )

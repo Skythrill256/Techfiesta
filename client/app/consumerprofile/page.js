@@ -43,7 +43,7 @@ const page = () => {
             <input type='text' className='input' placeholder='Enter the details' />
             <label>Add Location</label>
             <input type='text' className='input' placeholder='Enter the details' />
-            <label>Add Emal</label>
+            <label>Add Email</label>
             <input type='email' className='input' placeholder='Enter the details' />
           <Button title="Add" />
           </div>

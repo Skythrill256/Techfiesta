@@ -29,6 +29,7 @@ input{
     padding: 2px 10px;
     border-radius: 30px;
     border-bottom: 1px solid gray;
+    color:#FFFFFF;
 }
 @media screen and (max-width: 768px) {
     .maincontainer {
