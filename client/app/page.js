@@ -6,31 +6,31 @@ import head from '../assets/ledflow.svg'
 import Button from './components/button/button'
 const page = () => {
   return (
-    <div className='maincontainer'id='main'>
+    <div className='maincontainer' id='main'>
       <div className='logo'>
-      <Image
-      src={logo}
-      width={500}
-      height={500}
-      
-    />
-        
-        </div>
-        <div className='heading'>
         <Image
-      src={head}
-      width={500}
-      height={500}
-      
-    />
-        </div>
-        <a href='/splashscreen'>
-          <Button title="Get Started"/>
-        
-        </a>
-      </div>
+          src={logo}
+          width={400}
+          height={400}
+          alt='mainpage'
+        />
 
-    
+      </div>
+      <div className='heading'>
+        <Image
+          src={head}
+          width={400}
+          height={400}
+          alt=''
+        />
+      </div>
+      <a href='/splashscreen'>
+        <Button title="Get Started" />
+
+      </a>
+    </div>
+
+
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import './navbar.css'
 const navbar = () => {
   return (
-    <div className="container">
+    <div className="w-screen container ">
 	<ul>
 	<li>
 		<a href="#">
