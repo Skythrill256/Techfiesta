@@ -34,7 +34,6 @@ const Page = () => {
 
   return (
     <div className='maincontainer'>
-      {/* Your existing JSX */}
       <form onSubmit={handleSubmit}>
         <div className='container'>
           <label>Product Description</label>
@@ -56,7 +55,6 @@ const Page = () => {
         </div>
         <button type="submit">Generate QR Code</button>
       </form>
-      {/* Display QR code image */}
       {qrCodeImage && <img src={qrCodeImage} alt="QR Code" />}
       <Navbar />
     </div>
