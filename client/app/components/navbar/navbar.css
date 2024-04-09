@@ -24,19 +24,32 @@ ul {
 	justify-content: space-between;
 	padding: .75rem;
 	border-radius: 10px;
-	box-shadow: 0 10px 50px 0 rgba(#05043e, .25);
+	box-shadow: 0 10px 50px 0 rgba(#B0FF37);
 }
 
 li:nth-child(6) {
 	margin-top: 5rem; 
 	padding-top: 1.25rem;
-	border-top: 1px solid #363664;
+	border-top: 1px solid #B0FF37;;
+}
+li a {
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: #B0FF37; 
 }
 
 li + li {
 	margin-top: .75rem;
 }
-
+.nav{
+	margin-top: 40px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 50px 0 rgba(5, 4, 62, .25);
+}
 a {
 	color: #FFF; 
 	text-decoration: none;
@@ -48,7 +61,7 @@ a {
 	border-radius: 8px;
 	position: relative;
 	&:hover, &:focus, &.active {
-		background-color: #30305a;
+		background-color: #B0FF37;
 		outline: 0;
 		
 		span { 
