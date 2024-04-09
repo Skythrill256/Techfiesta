@@ -14,26 +14,26 @@ const page = () => {
       src={Source}
       width={300}
       height={300}
-      className='source  sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4'
+      className='source m-8 '
       />
-    <Image
+      <Image
       src={Profile}
-      width={200}
-      height={180}
-      className='profile mt-10 '
+      width={300}
+      height={300}
+      className='source  m-8'
       />
+    
       </div>
       
       <div className='my-8  flex flex-col items-center container '>
-        <label>Add Name</label>
+        <b><label>Add Name</label></b>
         <input type='text' className='input' placeholder='Enter the details'/>
         <label>Add Location</label>
         <input type='text' className='input' placeholder='Enter the details'/>
-        <label>Add Email</label>
-        <input type='email' className='input' placeholder='Enter the details'/>
+        
         
       </div>
-     <Button title="Add"/>
+     <a href='/sourceregister'><Button title="Add"/></a>
       <Navbar/>
     </div>
     
