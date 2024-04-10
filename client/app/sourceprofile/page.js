@@ -34,8 +34,16 @@ const Page = () => {
 
   return (
     <div className='maincontainer'>
-      <form onSubmit={handleSubmit}>
-        <div className='container'>
+      <div className='flex flex-col justify-center items-center gap-4 w-full'>
+        <Image
+          src={Source}
+          width={300}
+          height={300}
+          className='source'
+        />
+        </div>
+      <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center'>
+        <div>
           <label>Product Description</label>
           <input
             type='text'
@@ -53,10 +61,10 @@ const Page = () => {
             onChange={handleChangeQuantity}
           />
         </div>
-        <button type="submit">Generate QR Code</button>
+        <Button title="Generate QR Code" texttype="submit"/>
       </form>
       {qrCodeImage && <img src={qrCodeImage} alt="QR Code" />}
-      <Navbar />
+      
     </div>
   );
 };

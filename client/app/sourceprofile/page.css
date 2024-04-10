@@ -30,6 +30,10 @@ input{
     border-radius: 30px;
     border-bottom: 1px solid gray;
     color:#FFFFFF;
+    margin-bottom: 40px;
+}
+.button{
+    color:#FFFFFF;
 }
 @media screen and (max-width: 768px) {
     .maincontainer {

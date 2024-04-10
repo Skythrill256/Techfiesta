@@ -17,10 +17,10 @@ const page = () => {
     setScannerOpened(!scannerOpened);
   }
   return (
-    <div className='relative  w-full h-screen top-[0] flex flex-col items-center justify-center'>
+    <div className=' w-full h-screen top-[0] flex flex-col items-center justify-center'>
       {
         !scannerOpened && 
-        <div className='h-screen'>
+        <div className='h-screen items-center justify-center'>
 
           <div className='flex flex-col justify-center items-center gap-4 mb-4 w-full'>
 
@@ -45,7 +45,7 @@ const page = () => {
             <input type='text' className='input' placeholder='Enter the details' />
             <label>Add Email</label>
             <input type='email' className='input' placeholder='Enter the details' />
-          <Button title="Add" />
+          <a href='/consumerrecord'><Button title="Add" /></a>
           </div>
         </div>
       }
